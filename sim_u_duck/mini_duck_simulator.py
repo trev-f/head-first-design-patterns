@@ -3,6 +3,8 @@
 
 
 from mallard_duck import MallardDuck
+from model_duck import ModelDuck
+from fly_behavior import FlyRocketPowered
 
 
 class MiniDuckSimulator:
@@ -10,6 +12,11 @@ class MiniDuckSimulator:
         mallard = MallardDuck()
         mallard.perform_quack()
         mallard.perform_fly()
+
+        model = ModelDuck()
+        model.perform_fly()
+        model.fly_behavior = FlyRocketPowered()
+        model.perform_fly()
 
 
 def main():
