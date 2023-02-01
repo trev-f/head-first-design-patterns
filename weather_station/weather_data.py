@@ -7,11 +7,8 @@ class WeatherData(Subject):
     """A concrete implementation of Subject that represents weather data
     """
     
-    def __init__(self, temperature: float, humidity: float, pressure: float) -> None:
+    def __init__(self) -> None:
         self.observers = []
-        self.temperature = temperature
-        self.humidity = humidity
-        self.pressure = pressure
 
 
     # implement the subject interface

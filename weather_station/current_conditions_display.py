@@ -8,8 +8,8 @@ from weather_data import WeatherData
 class CurrentConditionsDisplay(DisplayElement, Observer):
 
     def __init__(self, weather_data: WeatherData) -> None:
-        self._temperature = weather_data.temperature
-        self._humidity = weather_data.humidity
+        self._temperature = None
+        self._humidity = None
         self._weather_data = weather_data
 
         weather_data.register_observer(self)
@@ -26,4 +26,4 @@ class CurrentConditionsDisplay(DisplayElement, Observer):
     
 
     def display(self) -> None:
-        print(f"Current conditions: {self._temperature} F degrees and {self._humidity}% humidity")
+        print(f"Current conditions: {self._temperature}F degrees and {self._humidity}% humidity")
