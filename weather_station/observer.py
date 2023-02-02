@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Observer(ABC):
-
     @abstractmethod
     def update(self) -> None:
         """Update when weather measurements change

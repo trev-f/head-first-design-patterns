@@ -6,14 +6,12 @@ from weather_data import WeatherData
 
 
 class CurrentConditionsDisplay(DisplayElement, Observer):
-
     def __init__(self, weather_data: WeatherData) -> None:
         self._temperature = None
         self._humidity = None
         self._weather_data = weather_data
 
         weather_data.register_observer(self)
-    
 
     def update(self) -> None:
         # update state
@@ -22,7 +20,8 @@ class CurrentConditionsDisplay(DisplayElement, Observer):
 
         # update the display
         self.display()
-    
 
     def display(self) -> None:
-        print(f"Current conditions: {self._temperature}F degrees and {self._humidity}% humidity")
+        print(
+            f"Current conditions: {self._temperature}F degrees and {self._humidity}% humidity"
+        )

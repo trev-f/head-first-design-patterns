@@ -5,7 +5,6 @@ from weather_data import WeatherData
 
 
 class WeatherStation:
-
     @staticmethod
     def main() -> None:
         weather_data = WeatherData()
@@ -19,5 +18,5 @@ class WeatherStation:
         weather_data.set_measurements(temperature=78, humidity=90, pressure=29.2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     WeatherStation.main()

@@ -6,13 +6,11 @@ from weather_data import WeatherData
 
 
 class StatisticsDisplay(DisplayElement, Observer):
-
     def __init__(self, weather_data: WeatherData) -> None:
         self._temperatures = []
         self._weather_data = weather_data
 
         weather_data.register_observer(self)
-    
 
     def update(self) -> None:
         # pull state
@@ -20,7 +18,6 @@ class StatisticsDisplay(DisplayElement, Observer):
 
         # update the display
         self.display()
-    
 
     def display(self) -> None:
         temp_mean = statistics.fmean(self._temperatures)

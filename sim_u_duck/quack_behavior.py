@@ -6,11 +6,9 @@ from abc import ABC, abstractmethod
 
 
 class QuackBehavior(ABC):
-    
     @abstractmethod
     def quack(self) -> None:
-        """Quack
-        """
+        """Quack"""
 
 
 class Quack(QuackBehavior):
