@@ -33,8 +33,8 @@ class WeatherData(Subject):
     
 
     def set_measurements(self, temperature: float, humidity: float, pressure: float) -> None:
-        self.temperature = temperature
-        self.humidity = humidity
-        self.pressure = pressure
+        self.temperature = float(temperature)
+        self.humidity = float(humidity)
+        self.pressure = float(pressure)
 
         self.measurements_changed()
