@@ -1,5 +1,5 @@
 from current_conditions_display import CurrentConditionsDisplay
-
+from forecast_display import ForecastDisplay
 from weather_data import WeatherData
 
 
@@ -10,6 +10,7 @@ class WeatherStation:
         weather_data = WeatherData()
 
         current_display = CurrentConditionsDisplay(weather_data)
+        forecast_display = ForecastDisplay(weather_data)
 
         weather_data.set_measurements(temperature=80, humidity=65, pressure=30.4)
         weather_data.set_measurements(temperature=82, humidity=70, pressure=29.2)
