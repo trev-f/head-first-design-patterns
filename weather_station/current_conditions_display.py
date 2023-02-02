@@ -15,11 +15,10 @@ class CurrentConditionsDisplay(DisplayElement, Observer):
         weather_data.register_observer(self)
     
 
-    def update(self, temp: float, humidity: float, pressure: float) -> None:
+    def update(self) -> None:
         # update state
-        self._temperature = temp
-        self._humidity = humidity
-        _ = pressure
+        self._temperature = self._weather_data.temperature
+        self._humidity = self._weather_data.humidity
 
         # update the display
         self.display()

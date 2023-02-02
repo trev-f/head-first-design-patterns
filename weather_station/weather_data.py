@@ -22,7 +22,7 @@ class WeatherData(Subject):
 
     def notify_observers(self) -> None:
         for observer in self.observers:
-            observer.update(temp=self.temperature, humidity=self.humidity, pressure=self.pressure)
+            observer.update()
     
 
     # change weather data
