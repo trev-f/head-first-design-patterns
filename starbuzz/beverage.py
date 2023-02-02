@@ -9,6 +9,6 @@ class Beverage(ABC):
         self.description = 'Unknown Beverage'
 
     @abstractmethod
-    def cost(self) -> float:
+    def cost(self) -> int:
         """Calculate cost
         """
