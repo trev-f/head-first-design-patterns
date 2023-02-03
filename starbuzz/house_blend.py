@@ -9,4 +9,4 @@ class HouseBlend(Beverage):
         self.description = 'House Blend Coffee'
     
     def cost(self) -> int:
-        return _89
+        return 89

@@ -14,4 +14,4 @@ class Mocha(CondimentDecorator):
         return f"{self.beverage.description}, Mocha"
 
     def cost(self) -> int:
-        return _20 + self.beverage.cost()
+        return 20 + self.beverage.cost()

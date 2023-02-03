@@ -9,4 +9,4 @@ class DarkRoast(Beverage):
         self.description = 'Dark Roast Coffee'
 
     def cost(self) -> int:
-        return _99
+        return 99

@@ -14,4 +14,4 @@ class Whip(CondimentDecorator):
         return f"{self.beverage.description}, Whip"
 
     def cost(self) -> int:
-        return _10 + self.beverage.cost()
+        return 10 + self.beverage.cost()

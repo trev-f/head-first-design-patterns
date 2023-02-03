@@ -14,4 +14,4 @@ class SteamedMilk(CondimentDecorator):
         return f"{self.beverage.description}, Steamed Milk"
 
     def cost(self) -> int:
-        return _10 + self.beverage.cost()
+        return 10 + self.beverage.cost()

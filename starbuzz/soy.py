@@ -14,4 +14,4 @@ class Soy(CondimentDecorator):
         return f"{self.beverage.description}, Soy"
 
     def cost(self) -> int:
-        return _15 + self.beverage.cost()
+        return 15 + self.beverage.cost()
